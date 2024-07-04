@@ -24,29 +24,36 @@
 
 
 
-# class Person():
-#     def __init__(self, name, age, height):
-#         self.name=name
-#         self.age=age
-#         self.height=height
-#     def General(self):
-#         print(f"This is {self.name},  {self.age}year old, with an height of {self.height}cm")
+class Person():
+    def __init__(self, name, age, height):
+        self.name=name
+        self.age=age
+        self.height=height
+    def General(self):
+        print(f"This is {self.name},  {self.age}year old, with an height of {self.height}cm")
 
-# class Student(Person):
-#     def students(self, level):
-#         self.level= level
-#         print(f"The student name is {self.name} {self.age}year old, with an height of {self.height}cm and in {self.level}level")
+class Student(Person):
+    # def students(self, level):
+    #     self.level= level
+    #     print(f"The student name is {self.name} {self.age}year old, with an height of {self.height}cm and in {self.level}level")
+    #another formular
+    def __init__(self, name, age, height, level):
+        super().__init__(name, age, height)
+        self.level= level
+        print(f"The student name is {self.name} {self.age}year old, with an height of {self.height}cm and in {self.level}level")
+        
 
 # class Lecturer(Person):
 #     def lecturers(self, course):
 #         self.course=course
-#         print(f"The lecturer name is {self.name} {self.age}year old, with an height of {self.height}cm and in charge of {self.course} course")
+#         # print(f"The lecturer name is {self.name} {self.age}year old, with an height of {self.height}cm and in charge of {self.course} course")
+#         print(f"The lecturer age is {self.age}year old, with an height of {self.height}cm and in charge of {self.course} course")
 
-# person1= Person("Ade", 31, 60)
-# person2= Student("Tomori Barakat", 25, 61)
+person1= Person("Ade", 31, 60)
+person2= Student("Tomori Barakat", 25, 61, 500)
 # person3=Lecturer("Prof Adeolu", 70, 57)
 
-# person1.General()
+person1.General()
 # person2.students(500)
 # person3.lecturers("AGY508")
 
